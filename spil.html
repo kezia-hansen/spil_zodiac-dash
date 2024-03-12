@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---boxicons link--->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!---remixicons link--->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!---google fonts link--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">
+
+    <!---adobe fonts link--->
+
+    <link rel="stylesheet" href="https://use.typekit.net/gqu8ipb.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Spil</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="SVG/w_logo.svg" alt="Logo">
+            </a>
+        </div>
+
+        <ul class="navlist">
+            <li><a href="index.html">Forside</a></li>
+            <li><a href="spil.html" class="active">Spil</a></li>
+            <li><a href="grafik.html">Grafik</a></li>
+            <li><a href="assets.html">Assets</a></li>
+            <li><a href="teknik.html">Teknik</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <main>
+        <div id="screen">
+            <div id="game">
+                <div id="game_background">
+                </div>
+
+                <div id="game_elements">
+                    <div id="mc_spil_container">
+                        <div id="mc_sprite"></div>
+                    </div>
+
+                    <div id="god_genstand_container">
+                        <div id="god_genstand_sprite"></div>
+                    </div>
+
+                    <div id="god_genstand_container2">
+                        <div id="god_genstand_sprite2"></div>
+                    </div>
+
+                    <div id="god_genstand_container3">
+                        <div id="god_genstand_sprite3"></div>
+                    </div>
+
+                    <div id="bad_genstand_container">
+                        <div id="bad_genstand_sprite"></div>
+                    </div>
+
+                    <div id="bad_genstand_container2">
+                        <div id="bad_genstand_sprite2"></div>
+                    </div>
+
+                    <div id="bad_genstand_container3">
+                        <div id="bad_genstand_sprite3"></div>
+                    </div>
+
+                    <div id="game_mellemgrund"></div>
+
+                </div>
+
+                <div id="game_foreground">
+                </div>
+
+                <div id="game_ui">
+                    <div id="score_board">
+                        <div id="point"> 0</div>
+                    </div>
+
+                    <div id="life_board">
+                        <div id="liv">3</div>
+                    </div>
+                    <div id="time_board">
+                        <div id="indhold" class=""></div>
+                        <div id="sky"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sounds">
+                <audio src="lyde/bag_music.mp3" id="sound_bag"></audio>
+                <audio src="lyde/taber.mp3" id="sound_taber"></audio>
+                <audio src="lyde/vinder.mp3" id="sound_vinder"></audio>
+                <audio src="lyde/wahoo.mp3" id="sound_aries"></audio>
+                <audio src="lyde/oh_nooo.mp3" id="sound_skellet"></audio>
+            </div>
+
+            <div id="start" class="">
+                <div id="info_knap"></div>
+                <div id="info_img"></div>
+                <div id="exit3"></div>
+                <div id="start_knap"></div>
+            </div>
+            <div id="game_over" class="">
+                <div id="game_over_img"></div>
+                <div id="genstart1"></div>
+                <div id="exit1"></div>
+
+            </div>
+            <div id="level_complete" class="">
+                <div id="level_complete_img"></div>
+                <div id="genstart2"></div>
+                <div id="exit2"></div>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

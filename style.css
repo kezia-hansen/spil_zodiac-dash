@@ -1,0 +1,1029 @@
+/******************   General   ************************/
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  cursor: url(SVG/cursor.svg), default;
+}
+
+body {
+  background: linear-gradient(245.59deg, #c9c0ff 0%, #b5b2eb 28.53%, #6d81c1 75.52%);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  padding: 33px 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  z-index: 14;
+}
+
+.logo img {
+  width: 15%;
+  height: auto;
+  cursor: url(SVG/pointer.svg), default;
+}
+
+.navlist {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  gap: 30px;
+  overflow-x: auto;
+  margin-right: 20px;
+}
+
+.navlist a {
+  font-family: 'Cabin Sketch';
+  color: white;
+  padding: 0 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all .55s ease;
+}
+
+.navlist a:hover {
+  border-bottom: 2px solid white;
+  cursor: url(SVG/pointer.svg), default;
+}
+
+.navlist a.active {
+  border-bottom: 2px solid white;
+}
+
+.navlist a:last-child {
+  margin-left: auto;
+}
+
+#menu-icon {
+  color: white;
+  font-size: 35px;
+  z-index: 11;
+  cursor: url(SVG/pointer.svg), default;
+  display: none;
+}
+
+/******************   forside  ************************/
+
+.hero {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(245.59deg, #c9c0ff 0%, #b5b2eb 28.53%, #6d81c1 75.52%);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-text h5 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.hero-text h1 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 71px;
+  line-height: 1;
+  color: white;
+  margin: 0 0 45px;
+}
+
+.hero-text h2 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-family: 'Cabin Sketch', cursive;
+  color: white;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+.hero-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  right: -15%;
+  top: 28%;
+  animation: sway 2s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hero-text a {
+  font-family: 'Cabin Sketch', cursive;
+  display: inline-block;
+  color: white;
+  background: #b5b2eb;
+  border: 1px solid transparent;
+  padding: 12px 30px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all .55s ease;
+  cursor: url(SVG/pointer.svg), default;
+
+}
+
+.hero-text a:hover {
+  background: transparent;
+  border: 1px solid white;
+  transform: translateX(8px);
+}
+
+.hero-text a.ctaa {
+  background: transparent;
+  border: 1px solid white;
+  margin-left: 20px;
+  cursor: url(SVG/pointer.svg), default;
+}
+
+.hero-text a.ctaa i {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+footer {
+  position: fixed;
+  background-image: url(SVG/cloud_border.svg);
+  background-size: cover;
+  background-position: center center;
+  height: 111vh;
+  width: 100%;
+  bottom: 0;
+  left: 0%;
+  pointer-events: none;
+}
+
+@media (max-width: 1460px) {
+  section {
+    padding: 0 12%;
+    transition: .2s;
+  }
+}
+
+@media (max-width: 1340px) {
+  .hero-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 4rem;
+    margin: 0 0 10px;
+  }
+
+  .hero-text h5 {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 1195px) {
+  body {
+    overflow: hidden;
+  }
+
+  section {
+    padding: 0 3%;
+    transition: .2s;
+  }
+
+  .hero-text {
+    padding-top: 115px;
+  }
+
+  .hero-img img {
+    width: 50%;
+    height: auto;
+    top: -515px;
+    left: 52%;
+  }
+
+  .hero-text p {
+    padding-right: 56%;
+  }
+
+
+  .hero-text a.ctaa,
+  a.ctaa2 {
+    font-size: 15px;
+    line-height: 1.9;
+    padding-right: 3%;
+  }
+
+  .hero {
+    height: 100%;
+    min-height: 80vh;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  footer img {
+    position: fixed;
+  }
+}
+
+@media (max-width: 990px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navlist {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 300px;
+    height: 40vh;
+    background: #6a5db7;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px;
+    transition: all .55s ease;
+  }
+
+  .navlist a {
+    margin-left: 0;
+    display: block;
+    margin: 7px 0;
+  }
+
+  .navlist.open {
+    right: 0;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+}
+
+@media (max-width: 680px) {
+  body {
+    position: relative;
+    overflow: scroll
+  }
+
+  .hero {
+    min-height: 60vh;
+    margin-bottom: 150px;
+  }
+
+  .hero-img img {
+    width: 70%;
+    height: auto;
+    position: relative;
+    left: 18%;
+    top: 3%;
+  }
+
+  .hero-text a {
+    margin-top: 10%;
+    margin-left: 7%;
+  }
+
+  .hero-text a.ctaa,
+  a.ctaa2 {
+    font-size: 15px;
+    line-height: 1.9;
+    padding-right: 3%;
+  }
+
+  .hero-text p {
+    font-size: 0.8rem;
+    padding: 0;
+    margin: 0;
+  }
+
+}
+
+/******************   spil  ************************/
+#screen {
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+#start {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(SVG/titelskærm.svg);
+  background-size: cover;
+  z-index: 10;
+}
+
+#start_knap {
+  position: absolute;
+  width: 16%;
+  height: auto;
+  top: 18%;
+  left: 36%;
+  background-image: url(SVG/play.svg);
+  background-size: cover;
+  aspect-ratio: 545/463;
+  cursor: url(SVG/pointer.svg), default;
+}
+
+#info_knap {
+  position: absolute;
+  width: 6%;
+  height: auto;
+  top: 26%;
+  left: 52%;
+  background-image: url(SVG/info.svg);
+  background-size: cover;
+  aspect-ratio: 545/463;
+  cursor: url(SVG/pointer.svg), default;
+}
+
+#exit3 {
+  position: absolute;
+  width: 9%;
+  height: auto;
+  top: 64%;
+  left: 39%;
+  background-image: url(SVG/leave.svg);
+  background-size: cover;
+  aspect-ratio: 545/463;
+  cursor: url(SVG/pointer.svg), default;
+  z-index: 14;
+}
+
+#info_img {
+  background-image: url(SVG/info_screen.svg);
+  background-size: cover;
+  aspect-ratio: 1090/960;
+  position: fixed;
+  top: 73px;
+  left: 285px;
+  display: none;
+  width: 50%;
+  height: auto;
+  z-index: 12;
+  cursor: url(SVG/pointer.svg), default;
+}
+
+#game {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+#game_over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(SVG/done.svg);
+  z-index: 10;
+}
+
+#game_over_img {
+  background-image: url(SVG/taber.svg);
+  background-size: cover;
+  width: 60%;
+  height: auto;
+  aspect-ratio: 1090/960;
+  position: absolute;
+  pointer-events: none;
+  left: 17%;
+  top: 12%;
+}
+
+#genstart1 {
+  position: absolute;
+  width: 9%;
+  height: auto;
+  top: 74%;
+  left: 52%;
+  background-image: url(SVG/replay.svg);
+  background-size: cover;
+  aspect-ratio: 545/463;
+  cursor: url(SVG/pointer.svg), default;
+}
+
+#exit1 {
+  position: absolute;
+  width: 9%;
+  height: auto;
+  top: 74%;
+  left: 30%;
+  background-image: url(SVG/leave.svg);
+  background-size: cover;
+  aspect-ratio: 545/463;
+  cursor: url(SVG/pointer.svg), default;
+}
+
+#level_complete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(SVG/done.svg);
+  z-index: 10;
+}
+
+#level_complete_img {
+  background-image: url(SVG/vinder.svg);
+  background-size: cover;
+  width: 60%;
+  height: auto;
+  aspect-ratio: 1090/960;
+  position: absolute;
+  pointer-events: none;
+  left: 17%;
+  top: 8%;
+}
+
+#genstart2 {
+  position: absolute;
+  width: 9%;
+  height: auto;
+  top: 74%;
+  left: 52%;
+  background-image: url(SVG/replay.svg);
+  background-size: cover;
+  aspect-ratio: 545/463;
+  cursor: url(SVG/pointer.svg), default;
+}
+
+#exit2 {
+  position: absolute;
+  width: 9%;
+  height: auto;
+  top: 74%;
+  left: 30%;
+  background-image: url(SVG/leave.svg);
+  background-size: cover;
+  aspect-ratio: 545/463;
+  cursor: url(SVG/pointer.svg), default;
+}
+
+#mc_spil_container {
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1010/804;
+  top: 50%;
+  left: 2%;
+  animation: wiggle 1s ease-in-out infinite;
+  z-index: 5;
+}
+
+#mc_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(SVG/mc_spil.svg);
+  background-size: cover;
+}
+
+#game_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(SVG/game_background.svg);
+  background-size: cover;
+}
+
+#game_mellemgrund {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(SVG/game_mellemgrund.svg);
+  background-size: cover;
+  z-index: 2;
+}
+
+#game_foreground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(SVG/game_foreground.svg);
+  background-size: cover;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/******************   game_elements  ************************/
+#game_elements {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+#god_genstand_container {
+  position: absolute;
+  width: 10%;
+  height: 15%;
+  aspect-ratio: 558.5/438;
+  top: -15%;
+  z-index: 3;
+}
+
+#god_genstand_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(SVG/god_genstand.svg);
+  background-size: cover;
+}
+
+#god_genstand_container2 {
+  position: absolute;
+  width: 10%;
+  height: 15%;
+  aspect-ratio: 558.5/438;
+  top: -15%;
+  z-index: 3;
+}
+
+#god_genstand_sprite2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(SVG/god_genstand.svg);
+  background-size: cover;
+}
+
+#god_genstand_container3 {
+  position: absolute;
+  width: 10%;
+  height: 15%;
+  aspect-ratio: 558.5/438;
+  top: -15%;
+  z-index: 3;
+}
+
+#god_genstand_sprite3 {
+  width: 100%;
+  height: 100%;
+  background-image: url(SVG/god_genstand.svg);
+  background-size: cover;
+}
+
+#bad_genstand_container {
+  position: absolute;
+  width: 10%;
+  height: 15%;
+  aspect-ratio: 568/477;
+  top: -15%;
+  z-index: 3;
+}
+
+#bad_genstand_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(SVG/bad_genstand.svg);
+  background-size: cover;
+}
+
+#bad_genstand_container2 {
+  position: absolute;
+  width: 10%;
+  height: 15%;
+  aspect-ratio: 568/477;
+  top: -15%;
+  z-index: 3;
+}
+
+#bad_genstand_sprite2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(SVG/bad_genstand.svg);
+  background-size: cover;
+}
+
+#bad_genstand_container3 {
+  position: absolute;
+  width: 10%;
+  height: 15%;
+  aspect-ratio: 568/477;
+  top: -15%;
+  z-index: 3;
+}
+
+#bad_genstand_sprite3 {
+  width: 100%;
+  height: 100%;
+  background-image: url(SVG/bad_genstand.svg);
+  background-size: cover;
+}
+
+/******************   game_ui  ************************/
+#game_ui {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+}
+
+#score_board {
+  background-image: url(SVG/point.svg);
+  background-size: cover;
+  z-index: 8;
+  position: absolute;
+  width: 10%;
+  top: 65%;
+  left: 74%;
+  aspect-ratio: 558/428;
+}
+
+#point {
+  font-family: 'Cabin Sketch';
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  top: 33%;
+  left: 105%;
+}
+
+#life_board {
+  background-image: url(SVG/liv.svg);
+  background-size: cover;
+  z-index: 8;
+  position: absolute;
+  width: 10%;
+  top: 66%;
+  left: 88%;
+  aspect-ratio: 558/420;
+}
+
+#liv {
+  font-family: 'Cabin Sketch';
+  display: inline-block;
+  z-index: 8;
+  vertical-align: bottom;
+  font-size: 2.3rem;
+  position: absolute;
+  top: 55%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#time_board {
+  position: absolute;
+  top: 76%;
+  z-index: 8;
+  right: 6%;
+  width: 20%;
+  aspect-ratio: 536/428;
+}
+
+#indhold {
+  position: absolute;
+  top: -3%;
+  left: 1%;
+  background-image: url(SVG/indhold.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#sky {
+  position: absolute;
+  background-image: url(SVG/tid.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.timer {
+  animation-name: timer_kf;
+  /* ændre senere igen */
+  animation-duration: 20s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes timer_kf {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+/******************   delay  ************************/
+.delay1 {
+  animation-delay: 0s;
+}
+
+.delay2 {
+  animation-delay: 0.3s;
+}
+
+.delay3 {
+  animation-delay: 0.5s;
+}
+
+.delay4 {
+  animation-delay: 1s;
+}
+
+/******************   positioner  ************************/
+
+.pos1 {
+  left: 15%;
+}
+
+.pos2 {
+  left: 25%;
+}
+
+.pos3 {
+  left: 35%;
+}
+
+.pos4 {
+  left: 45%;
+}
+
+.pos5 {
+  left: 55%;
+}
+
+.pos6 {
+  left: 65%;
+}
+
+.pos7 {
+  left: 70%;
+}
+
+.pos8 {
+  left: 80%;
+}
+
+.pos9 {
+  left: 90%;
+}
+
+
+/******************   animationer  ************************/
+
+.frys {
+  animation-play-state: paused;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  50% {
+    transform: rotateZ(-10deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+.shrink-and-turn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: shrink-and-turn 1s ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes shrink-and-turn {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scale(0.5);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(0.1);
+    opacity: 0;
+  }
+}
+
+.explode {
+  animation-name: explode;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.fald {
+  border-radius: 50%;
+  animation-name: fald;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fald {
+  from {
+    transform: translate(0, -250%);
+  }
+
+  to {
+    transform: translate(0, 650%);
+  }
+}
+
+/******************  Grafik + Teknik ************************/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 3.5px solid #ffffff;
+  padding-top: 10px;
+  text-align: left;
+}
+
+.grid-item:first-child {
+  border-top: none;
+}
+
+.grid-item img {
+  width: 40%;
+  height: auto;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+
+.grid-item2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-bottom: 3.5px solid #ffffff;
+  padding-top: 10px;
+  text-align: left;
+  margin-left: 0
+}
+
+.grid-item2 img {
+  width: 40%;
+  height: auto;
+  margin-bottom: 10px;
+  margin-left: 0
+}
+
+.grid-item2 p {
+  margin: 0;
+  align-self: flex-start;
+  color: white;
+}
+
+.grid-item p {
+  margin: 0;
+  align-self: flex-start;
+  color: white;
+}
+
+.side-by-side {
+  width: 40%;
+  height: auto;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.grid-item3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10px;
+  text-align: left;
+  margin-left: 0;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/****************** Assets ************************/
+
+.title {
+  font-family: 'Indie Flower', cursive;
+  font-size: 71px;
+  line-height: 1;
+  color: white;
+  margin-top: 10%;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.title img {
+  width: 5%;
+  height: auto;
+  position: absolute;
+}
+
+#info {
+  width: 89%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  background: transparent;
+  overflow: auto;
+}
+
+.gallery {
+  margin: 5px;
+  border: 1px solid #ffffff;
+  float: left;
+  width: 45%;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-family: 'Cabin Sketch';
+  background-color: #6b5db777;
+}
